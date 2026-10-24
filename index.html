@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>转群驱虫提醒 · 采食粪便台账 · 刘庆霞</title>
+<meta name="description" content="中小育肥猪场：转群/驱虫节点提醒 + 采食与粪便观察日记录。非诊疗、不开药、不卖兽药饲料。"/>
+<style>
+:root{--ink:#2c241c;--muted:#6b5e52;--line:#e0d4c6;--bg:#f6f1ea;--card:#fffcf8;--accent:#6b4423;--accent2:#8f5e38;--warn:#9a5b12}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);line-height:1.65;background:radial-gradient(900px 420px at 8% -10%,#e8d7c4,transparent 55%),radial-gradient(700px 360px at 100% 0,#dccfbf,transparent 48%),var(--bg)}
+.top{position:sticky;top:0;z-index:10;background:rgba(246,241,234,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:900px;margin:0 auto;padding:10px 16px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+.brand{font-weight:800}.nav a{margin-left:6px;text-decoration:none;color:var(--ink);font-size:13px;padding:6px 10px;border-radius:999px}
+.nav a:hover{background:#fff;border:1px solid var(--line)}
+.wrap{max-width:900px;margin:0 auto;padding:18px 16px 56px}
+.kicker{display:inline-block;font-size:12px;font-weight:700;color:var(--accent);background:#efe4d8;border:1px solid #d9c7b4;border-radius:999px;padding:4px 10px;margin-bottom:10px}
+h1{margin:0 0 10px;font-size:clamp(28px,5vw,40px);line-height:1.2}
+.lead{color:var(--muted);font-size:17px;max-width:42em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{font-size:12px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.btn{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:12px}
+.btn-p{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff}.btn-g{background:#fff;color:var(--ink);border:1px solid var(--line)}.btn-block{width:100%}
+.warn{margin:16px 0;padding:14px 16px;border-radius:14px;background:#fff8ee;border:1px solid #efd3a8;border-left:6px solid var(--warn)}
+.warn h2{margin:0 0 6px;font-size:16px;color:var(--warn)}
+.grid{display:grid;gap:12px}@media(min-width:760px){.g2{grid-template-columns:1.05fr .95fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(44,36,28,.05)}
+.card h2{margin:0 0 8px;font-size:18px}.card p,.card li{color:var(--muted)}
+.q{margin:0 0 10px;padding:10px 12px;background:#f3ebe3;border-left:3px solid var(--accent);border-radius:0 10px 10px 0}
+.q cite{display:block;margin-top:4px;font-style:normal;font-size:12px;color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{position:relative;padding:10px 10px 10px 46px;border:1px solid var(--line);border-radius:12px;margin-bottom:8px;background:#fff}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:10px;top:10px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+label.ck{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line);border-radius:12px;margin:0 0 8px;background:#fff;cursor:pointer}
+label.ck input{margin-top:3px;width:18px;height:18px;accent-color:var(--accent)}
+.field{margin:0 0 10px}.field>span{display:block;font-size:13px;font-weight:700;margin-bottom:4px}
+.field input,.field select,.field textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+.field textarea{min-height:70px;resize:vertical}
+.row2{display:grid;gap:10px}@media(min-width:560px){.row2{grid-template-columns:1fr 1fr}}
+.bar{height:8px;background:#e8ddd2;border-radius:999px;overflow:hidden;margin:6px 0 8px}.bar>i{display:block;height:100%;width:0;background:linear-gradient(90deg,#8f5e38,var(--accent))}
+.msg{min-height:1.3em;font-weight:700}.ok{color:#5a3a18}.err{color:#8b2e1a}
+.item{border:1px dashed var(--line);border-radius:10px;padding:8px 10px;margin-bottom:8px;font-size:13px;background:#fff}.item b{display:block}
+.sec{margin-top:16px}footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+code{background:#fff;border:1px solid var(--line);border-radius:6px;padding:1px 6px}
+.tl{border-left:3px solid #8f5e38;margin:8px 0 0 6px;padding-left:14px}.tl li{margin:0 0 10px;list-style:none}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in"><div class="brand">转群驱虫 · 采食粪便</div><nav class="nav"><a href="#node">节点提醒</a><a href="#obs">采食粪便</a><a href="#book">预约试填</a><a href="#hist">本机记录</a></nav></div></header>
+<main class="wrap">
+<section>
+  <div class="kicker">沈阳农业大学 · 动物科学 · 课程 MVP</div>
+  <h1>转群驱虫别靠催，采食粪便留一笔</h1>
+  <p class="lead">给中小<strong>育肥猪场</strong>主责人：转群 / 驱虫节点提醒，加上采食档位与粪便观察日记录。不是蛋鸡日历，也不开药、不卖兽药饲料。</p>
+  <div class="chips"><span class="chip">刘庆霞 · 2024109018</span><span class="chip">育肥猪转群驱虫提醒·采食粪便轻台账</span><span class="chip">非诊疗 · 不卖料</span></div>
+  <div class="cta"><a class="btn btn-p" href="#node">勾本周节点</a><a class="btn btn-g" href="#obs">记采食粪便</a></div>
+</section>
+<section class="warn">
+  <h2>边界三句</h2>
+  <ul>
+    <li>只做转群/驱虫节点提醒 + 采食与粪便观察留痕。</li>
+    <li>非诊疗、不开药、不卖兽药饲料、不上传感器。</li>
+    <li>记录只存在这台设备浏览器里；驱虫方案仍找线下兽医。</li>
+  </ul>
+</section>
+<section class="sec grid g2">
+  <article class="card">
+    <h2>要对上的三件事</h2>
+    <blockquote class="q">转群、驱虫日子靠口头或微信催，忙起来漏一茬说不清。<cite>第1周假设 · 节点靠催</cite></blockquote>
+    <blockquote class="q">采食和粪便观察各记各的，复盘对不上哪天开始差。<cite>第1周假设 · 观察分散</cite></blockquote>
+    <blockquote class="q">换班后问「驱过没」各说各的，缺一页能留下来的表。<cite>第1周假设 · 换班对不上</cite></blockquote>
+  </article>
+  <article class="card">
+    <h2>三步</h2>
+    <ol class="steps">
+      <li>在节点区勾清本周转群/驱虫是否到期，五项看完再保存。</li>
+      <li>每天用档位记采食，用选项记粪便观察，不写病名药名。</li>
+      <li>愿试填留手机；开药卖料不在这页。</li>
+    </ol>
+  </article>
+</section>
+<section class="sec card" id="node">
+  <h2>转群 / 驱虫节点（本周）</h2>
+  <div class="bar"><i id="bar"></i></div>
+  <p id="barText" style="margin:0 0 10px;font-size:13px;color:var(--muted)">已看 0 / 5</p>
+  <form id="nodeForm">
+    <label class="ck"><input type="checkbox" name="c1"/> 看过本周是否到转群日（已做 / 未做写清）</label>
+    <label class="ck"><input type="checkbox" name="c2"/> 看过本周是否到驱虫提醒日（只提醒，不写药名）</label>
+    <label class="ck"><input type="checkbox" name="c3"/> 换班交接写了「转过 / 驱过」，不是只口头说</label>
+    <label class="ck"><input type="checkbox" name="c4"/> 没有把经销商催促当成已经做过的记录</label>
+    <label class="ck"><input type="checkbox" name="c5"/> 边界：本页不开药、不卖兽药饲料、不上传感器</label>
+    <div class="row2">
+      <label class="field"><span>栏舍 / 批次</span><input name="batch" placeholder="例如：育肥 2 舍"/></label>
+      <label class="field"><span>填写人</span><input name="who" placeholder="场主 / 饲养员"/></label>
+    </div>
+    <div class="row2">
+      <label class="field"><span>节点类型</span>
+        <select name="kind" required>
+          <option value="">请选择</option>
+          <option>转群</option>
+          <option>驱虫提醒</option>
+          <option>转群+驱虫都看过</option>
+        </select>
+      </label>
+      <label class="field"><span>计划日期</span><input type="date" name="day"/></label>
+    </div>
+    <button class="btn btn-p btn-block" type="submit">保存节点到本机</button>
+    <p class="msg" id="nodeMsg"></p>
+  </form>
+</section>
+<section class="sec card" id="obs">
+  <h2>采食与粪便观察</h2>
+  <p>人话档位，不写治疗方案。</p>
+  <form id="obsForm">
+    <div class="row2">
+      <label class="field"><span>观察时间</span><input type="datetime-local" name="when" required/></label>
+      <label class="field"><span>栏舍</span><input name="batch" required placeholder="与节点同一舍"/></label>
+    </div>
+    <div class="row2">
+      <label class="field"><span>采食</span>
+        <select name="feed" required>
+          <option value="">请选择</option>
+          <option>正常</option>
+          <option>略差</option>
+          <option>明显差</option>
+          <option>当时没看清，稍后补</option>
+        </select>
+      </label>
+      <label class="field"><span>粪便观察</span>
+        <select name="feces" required>
+          <option value="">请选择</option>
+          <option>大致正常</option>
+          <option>偏稀（只观察）</option>
+          <option>偏干（只观察）</option>
+          <option>需线下请兽医看，本页不下结论</option>
+        </select>
+      </label>
+    </div>
+    <label class="field"><span>一句备注</span><textarea name="note" placeholder="例如：转群次日采食略差，已勾上，不开药。"></textarea></label>
+    <button class="btn btn-p btn-block" type="submit">保存观察记录</button>
+    <p class="msg" id="obsMsg"></p>
+  </form>
+</section>
+<section class="sec card">
+  <h2>本周节奏</h2>
+  <ul class="tl">
+    <li><strong>Day1–2</strong>定转群/驱虫五项与采食粪便档位，土褐主题区别蛋鸡页。</li>
+    <li><strong>Day3–5</strong>上线单页并自测保存。</li>
+    <li><strong>Day6–7</strong>电话试填提纲，样本只计育肥场主责人。</li>
+  </ul>
+</section>
+<section class="sec card" id="book">
+  <h2>预约两周试填</h2>
+  <form id="bookForm">
+    <div class="row2">
+      <label class="field"><span>怎么称呼</span><input name="name" required/></label>
+      <label class="field"><span>手机号</span><input name="phone" required pattern="1[3-9]\d{9}" placeholder="11位"/></label>
+    </div>
+    <label class="field"><span>最想先记清的一件事</span><textarea name="wish" placeholder="例如：驱虫日老被催；采食差从哪天开始对不上"></textarea></label>
+    <button class="btn btn-p btn-block" type="submit">留下预约（仅存本机）</button>
+    <p class="msg" id="bookMsg"></p>
+    <p style="font-size:12px;color:var(--muted)">刘庆霞 · 13610849721 · 沈阳农业大学动物科学与医学学院 · 动物科学</p>
+  </form>
+</section>
+<section class="sec card" id="hist">
+  <h2>本机最近记录</h2>
+  <div id="list"></div>
+  <button class="btn btn-g" type="button" id="clear">清空本机记录</button>
+</section>
+<footer>
+  <p>刘庆霞（学号 2024109018）· 育肥猪转群驱虫提醒·采食粪便轻台账 · 路径 B</p>
+  <p>公网：<code>https://hjw-create.github.io/liuqX-yufei-mvp/</code></p>
+</footer>
+</main>
+<script>
+(function(){
+  var KEY='liuqX_yufei_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
+  function save(list){localStorage.setItem(KEY,JSON.stringify(list.slice(0,40)));render()}
+  function stamp(){var d=new Date(),p=function(n){return n<10?'0'+n:''+n};return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate())+' '+p(d.getHours())+':'+p(d.getMinutes())}
+  function render(){var list=load(),box=document.getElementById('list');if(!list.length){box.innerHTML="<p style='color:var(--muted);font-size:13px'>还没有记录。先勾节点或记一条采食粪便。</p>";return}box.innerHTML=list.map(function(r){return "<div class='item'><b>"+r.type+" · "+r.at+"</b>"+r.summary+"</div>"}).join('')}
+  function bar(){var boxes=document.querySelectorAll('#nodeForm input[type=checkbox]');var n=0;boxes.forEach(function(b){if(b.checked)n++});document.getElementById('bar').style.width=(n/boxes.length*100)+'%';document.getElementById('barText').textContent='已看 '+n+' / '+boxes.length}
+  document.querySelectorAll('#nodeForm input[type=checkbox]').forEach(function(b){b.addEventListener('change',bar)});bar();
+  document.getElementById('nodeForm').onsubmit=function(e){e.preventDefault();var fd=new FormData(e.target);var n=['c1','c2','c3','c4','c5'].filter(function(k){return fd.get(k)}).length;var msg=document.getElementById('nodeMsg');if(n<5){msg.className='msg err';msg.textContent='五项都看过再保存。';return}var list=load();list.unshift({type:'节点提醒',at:stamp(),summary:'类型：'+fd.get('kind')+'；栏舍：'+(fd.get('batch')||'未填')+'；日期：'+(fd.get('day')||'未填')+'；填写人：'+(fd.get('who')||'未填')});save(list);msg.className='msg ok';msg.textContent='节点已保存在本机。本页不指定药名。'};
+  document.getElementById('obsForm').onsubmit=function(e){e.preventDefault();var fd=new FormData(e.target);var list=load();list.unshift({type:'采食粪便',at:stamp(),summary:'时间：'+fd.get('when')+'；栏舍：'+fd.get('batch')+'；采食：'+fd.get('feed')+'；粪便：'+fd.get('feces')+'；备注：'+((fd.get('note')||'无').toString().trim()||'无')});save(list);document.getElementById('obsMsg').className='msg ok';document.getElementById('obsMsg').textContent='已保存。异常请线下找兽医。'};
+  document.getElementById('bookForm').onsubmit=function(e){e.preventDefault();var fd=new FormData(e.target);var phone=(fd.get('phone')||'').toString();var msg=document.getElementById('bookMsg');if(!/^1[3-9]\d{9}$/.test(phone)){msg.className='msg err';msg.textContent='请填写11位手机号。';return}var list=load();list.unshift({type:'预约试填',at:stamp(),summary:'称呼：'+fd.get('name')+'；手机：'+phone+'；想记清：'+((fd.get('wish')||'未写').toString().trim()||'未写')});save(list);msg.className='msg ok';msg.textContent='预约草稿在本机。';e.target.reset()};
+  document.getElementById('clear').onclick=function(){if(!confirm('清空本机记录？'))return;localStorage.removeItem(KEY);render()};
+  render();
+})();
+</script>
+</body>
+</html>
